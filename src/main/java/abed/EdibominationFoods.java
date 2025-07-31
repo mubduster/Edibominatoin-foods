@@ -19,6 +19,6 @@ public class EdibominationFoods implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Foods you probably shouldnt eat are available and on their way!");
 	}
 }
