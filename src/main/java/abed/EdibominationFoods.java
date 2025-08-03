@@ -23,10 +23,9 @@ public class EdibominationFoods implements ModInitializer {
 		LOGGER.info("Foods you probably shouldnt eat are available and on their way!");
 	
 		// Initialize blocks
-		foodPorcessorBlocks.initialize(
-			ItemGroupEvents.modifyEntriesEvent(ModItems.CUSTOM_ITEM_GROUP_KEY).register((itemGroup) -> {
-				itemGroup.add(foodPorcessorBlocks.FOOD_PROCESSOR.asItem());
-			})
-		);
+		foodPorcessorBlocks.initialize();
+
+		foodProcessorItem.initialize();
+			
 	}
 }
