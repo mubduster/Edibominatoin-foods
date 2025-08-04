@@ -3,6 +3,7 @@ package abed;
 
 import java.util.function.Function;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -14,7 +15,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-public class foodPorcessorBlocks {
+public class foodProcessorBlocks {
     
     private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem){
         
@@ -47,5 +48,10 @@ public class foodPorcessorBlocks {
         AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD),
         true
     );
-    public static void initialize() {}
+    public static void initialize() {
+        ItemGroupEvents.modifyEntriesEvent(foodProcessorItem.CUSTOM_ITEM_GROUP_KEY).register((itemGroup) -> {
+            itemGroup.add(foodProcessorBlocks.FOOD_PROCESSOR.asItem());
+        });
+    }
 }
+
