@@ -1,7 +1,7 @@
 package abed;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +23,7 @@ public class EdibominationFoods implements ModInitializer {
 		LOGGER.info("Foods you probably shouldnt eat are available and on their way!");
 	
 		// Initialize blocks
-		foodPorcessorBlocks.initialize();
+		foodProcessorBlocks.initialize();
 
 		foodProcessorItem.initialize();
 			

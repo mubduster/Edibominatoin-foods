@@ -1,0 +1,9 @@
+{
+    "model":{
+        "type":"minecraft:model",
+        "model":"edibomination-foods:block/food_processor",
+        "textures":{
+            "0":"edibomination-foods:block/food_processor"
+        }
+    }
+}

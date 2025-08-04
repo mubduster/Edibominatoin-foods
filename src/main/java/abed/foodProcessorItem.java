@@ -24,20 +24,16 @@ public class foodProcessorItem {
 
         return item;
     }
-
-    public static final Item FOOD_PROCESSOR_BLOCK = register("food_processor_block", Item::new, new Item.Settings());
+ 
+    public static final Item FOOD_PROCESSOR_CATEGORY_ITEM = register("142367the_food_processor_category_item", Item::new, new Item.Settings());
 
     public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(EdibominationFoods.MOD_ID, "item_group")); 
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
-        .icon(() -> new ItemStack(foodProcessorItem.FOOD_PROCESSOR_BLOCK))
-        .displayName(Text.translatable("itemGroup.edibomination_foods"))
+        .icon(() -> new ItemStack(foodProcessorBlocks.FOOD_PROCESSOR))
+        .displayName(Text.translatable("mod-category"))
         .build();
 
     public static void initialize() {
         Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
-
-        ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
-            itemGroup.add(foodProcessorItem.FOOD_PROCESSOR_BLOCK);
-        });
     }
 }

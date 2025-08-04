@@ -25,6 +25,7 @@ loom {
 		"edibomination-foods" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
+			//sourceSet sourceSets.data
 		}
 	}
 

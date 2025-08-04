@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "":{
+            "model": "edibomination-foods:block/food_processor"
+        }
+    }
+}
