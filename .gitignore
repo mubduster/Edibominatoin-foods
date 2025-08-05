@@ -30,8 +30,13 @@ bin/
 
 # fabric
 
-!run/data
-run/
+!run/data/edibomination-foods/loot_table/blocks/food_processor.json
+run/saves
+run/mods
+run/logs
+run/resources
+run/resourcepacks
+run/downloads
 
 # java
 
