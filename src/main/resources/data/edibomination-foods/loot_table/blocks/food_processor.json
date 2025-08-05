@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "edibomination-foods:food_processor",
+                    "weight": 60,
+                    "quality": 64
+                
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }  
+                    
+            ]
+        }
+    ]
+}
