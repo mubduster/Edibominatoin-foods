@@ -45,7 +45,10 @@ public class foodProcessorBlocks {
     public static final Block FOOD_PROCESSOR = register(
         "food_processor",
         Block::new,
-        AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD),
+        AbstractBlock.Settings.create()
+        .strength(2.4f, 0.5f)
+        .requiresTool()
+        .sounds(BlockSoundGroup.WOOD),
         true
     );
     public static void initialize() {
